@@ -140,7 +140,7 @@ header::after {
 }
 
 header h1 {
-    color: var(--light-cream);
+    color: var(--primary-burgundy);
     font-size: 3em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
