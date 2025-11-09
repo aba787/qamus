@@ -802,41 +802,5 @@ speakText = function(text, lang = 'ar') {
     }
 };
 
-// Add CSS animations
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes rippleEffect {
-        to {
-            transform: scale(4);
-            opacity: 0;
-        }
-    }
-    
-    @keyframes copyNotification {
-        0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
-        20% { opacity: 1; transform: translateX(-50%) translateY(0); }
-        80% { opacity: 1; transform: translateX(-50%) translateY(0); }
-        100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
-    }
-    
-    @keyframes float {
-        0% { transform: translateY(0) rotate(0deg); }
-        100% { transform: translateY(-100vh) rotate(360deg); }
-    }
-    
-    @keyframes pulseIndicator {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-    }
-    
-    @keyframes bounce {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.2); }
-    }
-    
-    @keyframes fadeOut {
-        0% { opacity: 1; transform: scale(1); }
-        100% { opacity: 0; transform: scale(0.8); }
-    }
-`;
-document.head.appendChild(style);
+// تم نقل جميع الـ CSS animations إلى ملف style.css لتحسين التنظيم
+console.log('جميع الـ CSS animations موجودة الآن في style.css');
