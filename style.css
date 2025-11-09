@@ -8,7 +8,7 @@
     --text-dark: #2C1810;
     --text-secondary: #4a5568;
     --gradient-primary: linear-gradient(135deg, #8B1538 0%, #B8860B 100%);
-    --gradient-secondary: linear-gradient(135deg, #D2691E 0%, #CD853F 100%);
+    --gradient-secondary: linear-gradient(135deg, #8B1538 0%, #D2691E 100%);
     --gradient-accent: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --shadow-light: 0 8px 25px rgba(139, 21, 56, 0.15);
     --shadow-medium: 0 15px 35px rgba(139, 21, 56, 0.2);
@@ -201,7 +201,7 @@ header h2 {
 
 button {
     padding: 18px 35px;
-    background: var(--gradient-secondary);
+    background: var(--gradient-primary);
     color: white;
     border: none;
     border-radius: 50px;
@@ -209,7 +209,7 @@ button {
     font-size: 16px;
     font-weight: 600;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 25px rgba(210, 105, 30, 0.3);
+    box-shadow: 0 8px 25px rgba(139, 21, 56, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -231,8 +231,8 @@ button:hover::before {
 
 button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(210, 105, 30, 0.4);
-    background: linear-gradient(135deg, var(--secondary-gold) 0%, #DAA520 100%);
+    box-shadow: 0 15px 35px rgba(139, 21, 56, 0.4);
+    background: linear-gradient(135deg, var(--primary-burgundy) 0%, var(--accent-brown) 100%);
 }
 
 button:active {
@@ -268,7 +268,7 @@ button:active {
 }
 
 .tab-button.active {
-    background: var(--gradient-secondary);
+    background: var(--gradient-primary);
     color: white;
     border-color: transparent;
     box-shadow: var(--shadow-medium);
@@ -544,14 +544,14 @@ button:active {
 }
 
 .action-btn {
-    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    background: var(--gradient-primary);
     margin: 15px 0;
-    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 8px 25px rgba(139, 21, 56, 0.3);
 }
 
 .action-btn:hover {
-    background: linear-gradient(135deg, #218838 0%, #1e7e8c 100%);
-    box-shadow: 0 15px 35px rgba(40, 167, 69, 0.4);
+    background: linear-gradient(135deg, var(--primary-burgundy) 0%, var(--accent-brown) 100%);
+    box-shadow: 0 15px 35px rgba(139, 21, 56, 0.4);
 }
 
 .quiz-intro {
