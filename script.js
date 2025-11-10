@@ -465,14 +465,14 @@ function showSpeechIndicator() {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: linear-gradient(135deg, #8B1538, #722F37);
         color: white;
         padding: 15px 25px;
         border-radius: 30px;
         font-size: 14px;
         font-weight: bold;
         z-index: 10000;
-        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 10px 30px rgba(139, 21, 56, 0.4);
         animation: pulseIndicator 1.5s infinite;
         display: flex;
         align-items: center;
