@@ -55,6 +55,10 @@ body::before {
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: calc(100% - 60px);
     min-height: auto;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* تأثير الإضاءة */
