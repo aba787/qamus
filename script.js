@@ -675,7 +675,7 @@ function showCopyNotification(element, text) {
         top: -40px;
         left: 50%;
         transform: translateX(-50%);
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: linear-gradient(135deg, #8B1538, #722F37);
         color: white;
         padding: 8px 15px;
         border-radius: 20px;
