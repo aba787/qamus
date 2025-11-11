@@ -1,6 +1,7 @@
 
 // HR Terms Database
 const hrTerms = [
+    // مصطلحات الموارد البشرية - HR Terms
     {
         arabic: "إدارة الموارد البشرية",
         english: "Human Resource Management",
@@ -60,6 +61,130 @@ const hrTerms = [
         english: "Job Title",
         category: "noun",
         example: "المسمى الوظيفي يحدد المسؤوليات - Job title determines the responsibilities."
+    },
+    
+    // مصطلحات تعليمية ومكتبية - Educational & Office Terms
+    {
+        arabic: "كتاب",
+        english: "Book",
+        category: "noun",
+        example: "قرأت كتاباً مفيداً عن إدارة الأعمال - I read a useful book about business management."
+    },
+    {
+        arabic: "الكتب",
+        english: "Books",
+        category: "noun (plural)",
+        example: "الكتب مصدر مهم للمعرفة - Books are an important source of knowledge."
+    },
+    {
+        arabic: "مكتبة",
+        english: "Library",
+        category: "noun",
+        example: "المكتبة مليئة بالكتب المفيدة - The library is full of useful books."
+    },
+    {
+        arabic: "قلم",
+        english: "Pen",
+        category: "noun",
+        example: "استخدم القلم للكتابة - Use the pen to write."
+    },
+    {
+        arabic: "ورقة",
+        english: "Paper",
+        category: "noun",
+        example: "اكتب على الورقة - Write on the paper."
+    },
+    {
+        arabic: "مكتب",
+        english: "Office / Desk",
+        category: "noun",
+        example: "العمل في المكتب مريح - Working in the office is comfortable."
+    },
+    {
+        arabic: "كمبيوتر",
+        english: "Computer",
+        category: "noun",
+        example: "الكمبيوتر أداة مهمة في العمل - The computer is an important tool at work."
+    },
+    {
+        arabic: "هاتف",
+        english: "Phone",
+        category: "noun",
+        example: "الهاتف وسيلة تواصل سريعة - The phone is a fast communication tool."
+    },
+    {
+        arabic: "رسالة",
+        english: "Message / Letter",
+        category: "noun",
+        example: "أرسل رسالة إلى زميلك - Send a message to your colleague."
+    },
+    {
+        arabic: "اجتماع",
+        english: "Meeting",
+        category: "noun",
+        example: "الاجتماع غداً في الساعة العاشرة - The meeting is tomorrow at ten o'clock."
+    },
+    
+    // مصطلحات يومية شائعة - Common Daily Terms
+    {
+        arabic: "الطعام",
+        english: "Food",
+        category: "noun",
+        example: "الطعام الصحي مهم للجسم - Healthy food is important for the body."
+    },
+    {
+        arabic: "الماء",
+        english: "Water",
+        category: "noun",
+        example: "اشرب الماء يومياً - Drink water daily."
+    },
+    {
+        arabic: "سيارة",
+        english: "Car",
+        category: "noun",
+        example: "السيارة وسيلة نقل مريحة - The car is a comfortable means of transportation."
+    },
+    {
+        arabic: "بيت",
+        english: "House / Home",
+        category: "noun",
+        example: "البيت مكان الراحة - Home is a place of comfort."
+    },
+    {
+        arabic: "مدرسة",
+        english: "School",
+        category: "noun",
+        example: "المدرسة مكان التعلم - School is a place of learning."
+    },
+    {
+        arabic: "طالب",
+        english: "Student",
+        category: "noun",
+        example: "الطالب يدرس بجد - The student studies hard."
+    },
+    {
+        arabic: "معلم",
+        english: "Teacher",
+        category: "noun",
+        example: "المعلم يشرح الدرس - The teacher explains the lesson."
+    },
+    {
+        arabic: "صديق",
+        english: "Friend",
+        category: "noun",
+        example: "الصديق الوفي نعمة - A loyal friend is a blessing."
+    },
+    {
+        arabic: "عائلة",
+        english: "Family",
+        category: "noun",
+        example: "العائلة أهم شيء في الحياة - Family is the most important thing in life."
+    },
+    {
+        arabic: "وقت",
+        english: "Time",
+        category: "noun",
+        example: "الوقت من ذهب - Time is gold."
     }
 ];
 
