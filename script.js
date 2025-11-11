@@ -1,11 +1,12 @@
 
-// HR Terms Database
+// Enhanced Dictionary Database with Multiple Categories
 const hrTerms = [
-    // مصطلحات الموارد البشرية - HR Terms
+    // ===== BUSINESS TERMS - مصطلحات الأعمال =====
     {
         arabic: "إدارة الموارد البشرية",
         english: "Human Resource Management",
-        category: "noun",
+        category: "Business",
+        synonyms: ["HR", "Personnel Management", "Staff Management"],
         example: "إدارة الموارد البشرية مسؤولة عن تطوير الموظفين - Human Resource Management is responsible for employee development."
     },
     {
@@ -183,14 +184,306 @@ const hrTerms = [
     {
         arabic: "وقت",
         english: "Time",
-        category: "noun",
+        category: "General",
+        synonyms: ["Duration", "Period", "Moment"],
         example: "الوقت من ذهب - Time is gold."
+    },
+
+    // ===== TECHNOLOGY TERMS - مصطلحات التقنية =====
+    {
+        arabic: "الذكاء الاصطناعي",
+        english: "Artificial Intelligence",
+        category: "Technology",
+        synonyms: ["AI", "Machine Intelligence", "Smart Technology"],
+        example: "الذكاء الاصطناعي يغير مستقبل التكنولوجيا - Artificial Intelligence is changing the future of technology."
+    },
+    {
+        arabic: "البرمجة",
+        english: "Programming",
+        category: "Technology",
+        synonyms: ["Coding", "Software Development", "Development"],
+        example: "البرمجة مهارة مطلوبة في العصر الرقمي - Programming is a required skill in the digital age."
+    },
+    {
+        arabic: "قاعدة البيانات",
+        english: "Database",
+        category: "Technology",
+        synonyms: ["DB", "Data Storage", "Information System"],
+        example: "قاعدة البيانات تخزن المعلومات بشكل منظم - Database stores information in an organized way."
+    },
+    {
+        arabic: "الأمن السيبراني",
+        english: "Cybersecurity",
+        category: "Technology",
+        synonyms: ["Information Security", "Digital Security", "Network Security"],
+        example: "الأمن السيبراني يحمي من التهديدات الرقمية - Cybersecurity protects against digital threats."
+    },
+    {
+        arabic: "الحوسبة السحابية",
+        english: "Cloud Computing",
+        category: "Technology",
+        synonyms: ["Cloud Services", "Remote Computing", "Internet Computing"],
+        example: "الحوسبة السحابية توفر مرونة في العمل - Cloud computing provides flexibility in work."
+    },
+    {
+        arabic: "التطبيق المحمول",
+        english: "Mobile Application",
+        category: "Technology",
+        synonyms: ["Mobile App", "Smartphone App", "App"],
+        example: "التطبيق المحمول يسهل الوصول للخدمات - Mobile application facilitates access to services."
+    },
+    {
+        arabic: "التجارة الإلكترونية",
+        english: "E-commerce",
+        category: "Technology",
+        synonyms: ["Online Commerce", "Digital Commerce", "Internet Shopping"],
+        example: "التجارة الإلكترونية نمت بسرعة خلال الجائحة - E-commerce grew rapidly during the pandemic."
+    },
+    {
+        arabic: "البيانات الضخمة",
+        english: "Big Data",
+        category: "Technology",
+        synonyms: ["Large Data", "Data Analytics", "Massive Data"],
+        example: "البيانات الضخمة تساعد في اتخاذ قرارات أفضل - Big Data helps make better decisions."
+    },
+    {
+        arabic: "إنترنت الأشياء",
+        english: "Internet of Things",
+        category: "Technology",
+        synonyms: ["IoT", "Connected Devices", "Smart Devices"],
+        example: "إنترنت الأشياء يربط الأجهزة ببعضها - Internet of Things connects devices together."
+    },
+    {
+        arabic: "التعلم الآلي",
+        english: "Machine Learning",
+        category: "Technology",
+        synonyms: ["ML", "Automated Learning", "AI Learning"],
+        example: "التعلم الآلي يحسن الأداء مع الخبرة - Machine Learning improves performance with experience."
+    },
+
+    // ===== MEDICAL TERMS - مصطلحات طبية =====
+    {
+        arabic: "الطبيب",
+        english: "Doctor",
+        category: "Medical",
+        synonyms: ["Physician", "Medical Doctor", "Practitioner"],
+        example: "الطبيب يفحص المريض بعناية - The doctor examines the patient carefully."
+    },
+    {
+        arabic: "المستشفى",
+        english: "Hospital",
+        category: "Medical",
+        synonyms: ["Medical Center", "Healthcare Facility", "Clinic"],
+        example: "المستشفى يقدم رعاية طبية شاملة - The hospital provides comprehensive medical care."
+    },
+    {
+        arabic: "التشخيص",
+        english: "Diagnosis",
+        category: "Medical",
+        synonyms: ["Medical Assessment", "Examination", "Evaluation"],
+        example: "التشخيص المبكر يحسن فرص الشفاء - Early diagnosis improves recovery chances."
+    },
+    {
+        arabic: "العلاج",
+        english: "Treatment",
+        category: "Medical",
+        synonyms: ["Therapy", "Medical Care", "Medication"],
+        example: "العلاج الطبيعي مهم للتعافي - Physical therapy is important for recovery."
+    },
+    {
+        arabic: "الصيدلية",
+        english: "Pharmacy",
+        category: "Medical",
+        synonyms: ["Drugstore", "Apothecary", "Medicine Shop"],
+        example: "الصيدلية تبيع الأدوية والمستلزمات الطبية - The pharmacy sells medicines and medical supplies."
+    },
+    {
+        arabic: "التمريض",
+        english: "Nursing",
+        category: "Medical",
+        synonyms: ["Patient Care", "Medical Nursing", "Healthcare"],
+        example: "التمريض مهنة نبيلة تتطلب صبر وعناية - Nursing is a noble profession requiring patience and care."
+    },
+    {
+        arabic: "الجراحة",
+        english: "Surgery",
+        category: "Medical",
+        synonyms: ["Operation", "Medical Procedure", "Surgical Intervention"],
+        example: "الجراحة تتطلب دقة ومهارة عالية - Surgery requires high precision and skill."
+    },
+    {
+        arabic: "الطوارئ",
+        english: "Emergency",
+        category: "Medical",
+        synonyms: ["Urgent Care", "Critical Care", "Emergency Room"],
+        example: "قسم الطوارئ متاح على مدار الساعة - The emergency department is available 24/7."
+    },
+    {
+        arabic: "التطعيم",
+        english: "Vaccination",
+        category: "Medical",
+        synonyms: ["Immunization", "Vaccine", "Inoculation"],
+        example: "التطعيم يحمي من الأمراض المعدية - Vaccination protects against infectious diseases."
+    },
+    {
+        arabic: "الفحص الطبي",
+        english: "Medical Examination",
+        category: "Medical",
+        synonyms: ["Health Check", "Physical Exam", "Medical Test"],
+        example: "الفحص الطبي الدوري مهم للصحة - Regular medical examination is important for health."
+    },
+
+    // ===== TRAVEL TERMS - مصطلحات السفر =====
+    {
+        arabic: "المطار",
+        english: "Airport",
+        category: "Travel",
+        synonyms: ["Terminal", "Aviation Hub", "Flight Hub"],
+        example: "المطار مزدحم في موسم الإجازات - The airport is busy during holiday season."
+    },
+    {
+        arabic: "الطائرة",
+        english: "Airplane",
+        category: "Travel",
+        synonyms: ["Aircraft", "Plane", "Flight"],
+        example: "الطائرة تقلع في الموعد المحدد - The airplane takes off on schedule."
+    },
+    {
+        arabic: "الفندق",
+        english: "Hotel",
+        category: "Travel",
+        synonyms: ["Resort", "Inn", "Accommodation"],
+        example: "الفندق يقدم خدمة ممتازة للضيوف - The hotel provides excellent service to guests."
+    },
+    {
+        arabic: "التأشيرة",
+        english: "Visa",
+        category: "Travel",
+        synonyms: ["Entry Permit", "Travel Document", "Authorization"],
+        example: "التأشيرة مطلوبة لدخول البلد - Visa is required to enter the country."
+    },
+    {
+        arabic: "جواز السفر",
+        english: "Passport",
+        category: "Travel",
+        synonyms: ["Travel Document", "Identity Document", "International ID"],
+        example: "جواز السفر وثيقة سفر رسمية - Passport is an official travel document."
+    },
+    {
+        arabic: "الحجز",
+        english: "Reservation",
+        category: "Travel",
+        synonyms: ["Booking", "Appointment", "Registration"],
+        example: "الحجز المبكر يوفر أسعار أفضل - Early reservation offers better prices."
+    },
+    {
+        arabic: "الرحلة",
+        english: "Trip",
+        category: "Travel",
+        synonyms: ["Journey", "Travel", "Voyage"],
+        example: "الرحلة كانت ممتعة ومفيدة - The trip was enjoyable and beneficial."
+    },
+    {
+        arabic: "الأمتعة",
+        english: "Luggage",
+        category: "Travel",
+        synonyms: ["Baggage", "Suitcase", "Travel Bags"],
+        example: "الأمتعة يجب أن تكون ضمن الوزن المسموح - Luggage must be within allowed weight."
+    },
+    {
+        arabic: "السياحة",
+        english: "Tourism",
+        category: "Travel",
+        synonyms: ["Sightseeing", "Travel Industry", "Vacation"],
+        example: "السياحة تساهم في الاقتصاد المحلي - Tourism contributes to the local economy."
+    },
+    {
+        arabic: "الدليل السياحي",
+        english: "Tour Guide",
+        category: "Travel",
+        synonyms: ["Travel Guide", "Tourist Guide", "Local Guide"],
+        example: "الدليل السياحي يشرح تاريخ المكان - The tour guide explains the history of the place."
+    },
+
+    // ===== EDUCATION TERMS - مصطلحات تعليمية =====
+    {
+        arabic: "التعليم الإلكتروني",
+        english: "E-learning",
+        category: "Education",
+        synonyms: ["Online Learning", "Digital Education", "Distance Learning"],
+        example: "التعليم الإلكتروني أصبح أكثر شيوعاً - E-learning has become more common."
+    },
+    {
+        arabic: "الجامعة",
+        english: "University",
+        category: "Education",
+        synonyms: ["College", "Higher Education", "Academic Institution"],
+        example: "الجامعة تقدم برامج أكاديمية متنوعة - The university offers diverse academic programs."
+    },
+    {
+        arabic: "البحث العلمي",
+        english: "Scientific Research",
+        category: "Education",
+        synonyms: ["Research", "Academic Study", "Investigation"],
+        example: "البحث العلمي يقدم معرفة جديدة - Scientific research provides new knowledge."
+    },
+    {
+        arabic: "المنهج الدراسي",
+        english: "Curriculum",
+        category: "Education",
+        synonyms: ["Study Program", "Course Content", "Academic Plan"],
+        example: "المنهج الدراسي يشمل مواد متنوعة - The curriculum includes various subjects."
+    },
+    {
+        arabic: "التقييم",
+        english: "Assessment",
+        category: "Education",
+        synonyms: ["Evaluation", "Testing", "Grading"],
+        example: "التقييم يقيس مدى فهم الطلاب - Assessment measures student understanding."
+    },
+
+    // ===== FINANCE TERMS - مصطلحات مالية =====
+    {
+        arabic: "البنك",
+        english: "Bank",
+        category: "Finance",
+        synonyms: ["Financial Institution", "Banking", "Credit Union"],
+        example: "البنك يقدم خدمات مالية متنوعة - The bank provides various financial services."
+    },
+    {
+        arabic: "الاستثمار",
+        english: "Investment",
+        category: "Finance",
+        synonyms: ["Capital Investment", "Financial Investment", "Portfolio"],
+        example: "الاستثمار في التعليم مربح على المدى الطويل - Investment in education is profitable long-term."
+    },
+    {
+        arabic: "القرض",
+        english: "Loan",
+        category: "Finance",
+        synonyms: ["Credit", "Borrowing", "Financial Loan"],
+        example: "القرض يساعد في تمويل المشاريع - Loan helps finance projects."
+    },
+    {
+        arabic: "التأمين",
+        english: "Insurance",
+        category: "Finance",
+        synonyms: ["Coverage", "Protection", "Policy"],
+        example: "التأمين يحمي من المخاطر المالية - Insurance protects against financial risks."
+    },
+    {
+        arabic: "الميزانية",
+        english: "Budget",
+        category: "Finance",
+        synonyms: ["Financial Plan", "Spending Plan", "Financial Budget"],
+        example: "الميزانية تساعد في إدارة الأموال - Budget helps manage money."
     }
 ];
 
-// Initialize the application
+// Initialize the enhanced application
 document.addEventListener('DOMContentLoaded', function() {
     displayAllTerms();
+    initializeStats();
     
     // Load voices when available
     if ('speechSynthesis' in window) {
@@ -198,6 +491,16 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Available voices loaded');
         });
     }
+    
+    // Add category filter event listener
+    document.getElementById('categoryFilter').addEventListener('change', function() {
+        const query = document.getElementById('searchInput').value.trim();
+        if (query || this.value !== 'all') {
+            searchTerm();
+        } else {
+            hideSearchResults();
+        }
+    });
     
     // Add enter key functionality to search
     // Search functionality - Enter key
@@ -240,15 +543,78 @@ document.addEventListener('DOMContentLoaded', function() {
     createVoiceSettings();
 });
 
-// Display all terms in the dictionary tab
+// Display all terms in the dictionary tab with enhanced features
 function displayAllTerms() {
     const termsList = document.getElementById('termsList');
     termsList.innerHTML = '';
+    
+    // Add statistics header
+    const statsHeader = createStatsHeader();
+    termsList.appendChild(statsHeader);
     
     hrTerms.forEach(term => {
         const termCard = createTermCard(term);
         termsList.appendChild(termCard);
     });
+}
+
+// Initialize and display statistics
+function initializeStats() {
+    const totalTerms = hrTerms.length;
+    const categories = [...new Set(hrTerms.map(term => term.category))];
+    
+    console.log(`📊 إحصائيات الموقع المحسن:
+    - إجمالي المصطلحات: ${totalTerms}
+    - عدد الفئات: ${categories.length}
+    - الفئات: ${categories.join(', ')}
+    - نظام البحث الذكي: متاح ✅
+    - فلترة متقدمة: متاحة ✅
+    - دعم المرادفات: متاح ✅`);
+}
+
+// Create statistics header for dictionary
+function createStatsHeader() {
+    const header = document.createElement('div');
+    header.className = 'stats-header';
+    
+    const categoryStats = {};
+    hrTerms.forEach(term => {
+        categoryStats[term.category] = (categoryStats[term.category] || 0) + 1;
+    });
+    
+    const totalTerms = hrTerms.length;
+    const totalCategories = Object.keys(categoryStats).length;
+    
+    header.innerHTML = `
+        <div class="dictionary-stats">
+            <h4>📊 إحصائيات القاموس المحسن - Enhanced Dictionary Statistics</h4>
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span class="stat-number">${totalTerms}</span>
+                    <span class="stat-label">إجمالي المصطلحات<br>Total Terms</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">${totalCategories}</span>
+                    <span class="stat-label">فئات متخصصة<br>Specialized Categories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">✨</span>
+                    <span class="stat-label">بحث ذكي<br>Smart Search</span>
+                </div>
+            </div>
+            <div class="category-stats">
+                ${Object.entries(categoryStats)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([category, count]) => 
+                        `<span class="category-stat">
+                            ${getCategoryIcon(category)} ${category}: ${count}
+                        </span>`
+                    ).join('')}
+            </div>
+        </div>
+    `;
+    
+    return header;
 }
 
 // Create a term card element
@@ -276,40 +642,102 @@ function createTermCard(term, index = null) {
     return card;
 }
 
-// Enhanced search functionality with visual feedback
+// Enhanced Smart Search with AI-like capabilities
 function searchTerm() {
     const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
     const query = searchInput.value.trim().toLowerCase();
+    const selectedCategory = categoryFilter.value;
     
-    // Add searching animation
+    // Add searching animation with enhanced effects
     searchInput.style.background = 'linear-gradient(135deg, rgba(139, 21, 56, 0.1), rgba(114, 47, 55, 0.1))';
+    searchInput.style.transform = 'scale(1.02)';
     
     setTimeout(() => {
         searchInput.style.background = 'rgba(255, 255, 255, 0.9)';
+        searchInput.style.transform = 'scale(1)';
     }, 300);
     
-    if (!query) {
+    if (!query && selectedCategory === 'all') {
         hideSearchResults();
         return;
     }
     
-    // Enhanced search - includes category and example search
-    const results = hrTerms.filter(term => 
-        term.arabic.toLowerCase().includes(query) ||
-        term.english.toLowerCase().includes(query) ||
-        term.category.toLowerCase().includes(query) ||
-        term.example.toLowerCase().includes(query)
-    );
+    // Advanced Smart Search Algorithm with multiple matching strategies
+    const results = hrTerms.filter(term => {
+        // Category filter
+        if (selectedCategory !== 'all' && term.category !== selectedCategory) {
+            return false;
+        }
+        
+        // If no search query, return all terms in selected category
+        if (!query) {
+            return true;
+        }
+        
+        // Multi-level search matching
+        const searchMatches = [
+            // Exact match (highest priority)
+            term.arabic.toLowerCase() === query,
+            term.english.toLowerCase() === query,
+            
+            // Starts with match (high priority)
+            term.arabic.toLowerCase().startsWith(query),
+            term.english.toLowerCase().startsWith(query),
+            
+            // Contains match (medium priority)
+            term.arabic.toLowerCase().includes(query),
+            term.english.toLowerCase().includes(query),
+            
+            // Synonyms search (medium priority)
+            term.synonyms && term.synonyms.some(synonym => 
+                synonym.toLowerCase().includes(query) || 
+                synonym.toLowerCase().startsWith(query)
+            ),
+            
+            // Category match (low priority)
+            term.category.toLowerCase().includes(query),
+            
+            // Example search (low priority)
+            term.example.toLowerCase().includes(query),
+            
+            // Partial word matching for Arabic/English
+            query.length >= 2 && (
+                term.arabic.toLowerCase().split(' ').some(word => word.includes(query)) ||
+                term.english.toLowerCase().split(' ').some(word => word.includes(query))
+            )
+        ];
+        
+        return searchMatches.some(match => match);
+    });
     
-    displaySearchResults(results, query);
+    // Sort results by relevance
+    const sortedResults = results.sort((a, b) => {
+        // Exact matches first
+        const aExact = a.arabic.toLowerCase() === query || a.english.toLowerCase() === query;
+        const bExact = b.arabic.toLowerCase() === query || b.english.toLowerCase() === query;
+        if (aExact && !bExact) return -1;
+        if (!aExact && bExact) return 1;
+        
+        // Then starts with matches
+        const aStarts = a.arabic.toLowerCase().startsWith(query) || a.english.toLowerCase().startsWith(query);
+        const bStarts = b.arabic.toLowerCase().startsWith(query) || b.english.toLowerCase().startsWith(query);
+        if (aStarts && !bStarts) return -1;
+        if (!aStarts && bStarts) return 1;
+        
+        // Alphabetical order for similar relevance
+        return a.arabic.localeCompare(b.arabic);
+    });
     
-    // Log for debugging
-    console.log(`🔍 البحث عن: "${query}" - وُجد: ${results.length} نتائج`);
-    console.log('Results found:', results);
+    displaySearchResults(sortedResults, query, selectedCategory);
+    
+    // Enhanced logging for debugging
+    console.log(`🎯 البحث الذكي: "${query}" في فئة: "${selectedCategory}" - وُجد: ${sortedResults.length} نتائج`);
+    console.log('Smart search results:', sortedResults);
 }
 
-// Display search results with improved UI
-function displaySearchResults(results, query) {
+// Enhanced display search results with category info and synonyms
+function displaySearchResults(results, query, category = 'all') {
     const searchResults = document.getElementById('searchResults');
     const resultsContainer = document.getElementById('resultsContainer');
     
@@ -317,33 +745,124 @@ function displaySearchResults(results, query) {
     resultsContainer.innerHTML = '';
     
     if (results.length === 0) {
+        const categoryText = category !== 'all' ? ` في فئة "${category}"` : '';
         resultsContainer.innerHTML = `
             <div class="no-results">
-                😔 لم يتم العثور على نتائج لـ "<strong>${query}</strong>"<br>
-                😔 No results found for "<strong>${query}</strong>"<br>
-                <small>جرب كلمات مختلفة أو تحقق من الإملاء</small>
+                😔 لم يتم العثور على نتائج لـ "<strong>${query}</strong>"${categoryText}<br>
+                😔 No results found for "<strong>${query}</strong>" ${category !== 'all' ? `in category "${category}"` : ''}<br>
+                <small>💡 جرب كلمات مختلفة أو غير الفئة أو تحقق من الإملاء</small><br>
+                <small>💡 Try different words, change category, or check spelling</small>
             </div>
         `;
         return;
     }
     
-    // Add results count
+    // Enhanced results header with category statistics
+    const categoryStats = getCategoryStats(results);
+    const categoryText = category !== 'all' ? ` في فئة "${category}"` : '';
+    
     resultsContainer.innerHTML = `
-        <div style="text-align: center; margin-bottom: 20px; padding: 10px; background: linear-gradient(135deg, rgba(139, 21, 56, 0.1), rgba(114, 47, 55, 0.1)); border-radius: 10px;">
-            <strong>🎯 تم العثور على ${results.length} نتيجة لـ "${query}"</strong><br>
-            <strong>🎯 Found ${results.length} result(s) for "${query}"</strong>
+        <div class="results-header">
+            <div class="results-summary">
+                <strong>🎯 تم العثور على ${results.length} نتيجة لـ "${query}"${categoryText}</strong><br>
+                <strong>🎯 Found ${results.length} result(s) for "${query}" ${category !== 'all' ? `in "${category}"` : ''}</strong>
+            </div>
+            <div class="category-breakdown">
+                ${categoryStats.map(stat => `
+                    <span class="category-tag" data-category="${stat.category}">
+                        ${getCategoryIcon(stat.category)} ${stat.category}: ${stat.count}
+                    </span>
+                `).join('')}
+            </div>
         </div>
     `;
     
     results.forEach(term => {
-        const termCard = createTermCard(term);
-        resultsContainer.appendChild(termCard);
+        const enhancedTermCard = createEnhancedTermCard(term, query);
+        resultsContainer.appendChild(enhancedTermCard);
     });
     
-    // Scroll to results smoothly
+    // Scroll to results smoothly with enhanced animation
     setTimeout(() => {
         searchResults.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Add highlight animation to results
+        const termCards = resultsContainer.querySelectorAll('.term-card');
+        termCards.forEach((card, index) => {
+            setTimeout(() => {
+                card.style.animation = 'highlightResult 0.6s ease';
+            }, index * 100);
+        });
     }, 100);
+}
+
+// Get category statistics for results
+function getCategoryStats(results) {
+    const stats = {};
+    results.forEach(term => {
+        stats[term.category] = (stats[term.category] || 0) + 1;
+    });
+    
+    return Object.entries(stats).map(([category, count]) => ({
+        category,
+        count
+    })).sort((a, b) => b.count - a.count);
+}
+
+// Get category icon
+function getCategoryIcon(category) {
+    const icons = {
+        'Business': '💼',
+        'Technology': '💻',
+        'Medical': '🏥',
+        'Travel': '✈️',
+        'Education': '🎓',
+        'Finance': '💰',
+        'General': '📝'
+    };
+    return icons[category] || '📚';
+}
+
+// Create enhanced term card with synonyms and highlighting
+function createEnhancedTermCard(term, searchQuery = '') {
+    const card = document.createElement('div');
+    card.className = 'term-card enhanced';
+    
+    const termIndex = hrTerms.indexOf(term);
+    const isFavorite = favoriteTerms.includes(termIndex);
+    
+    // Highlight matching text
+    const highlightText = (text, query) => {
+        if (!query) return text;
+        const regex = new RegExp(`(${query})`, 'gi');
+        return text.replace(regex, '<mark class="highlight">$1</mark>');
+    };
+    
+    // Display synonyms if available
+    const synonymsDisplay = term.synonyms ? 
+        `<div class="synonyms">
+            <strong>مرادفات:</strong> ${term.synonyms.join(', ')}
+        </div>` : '';
+    
+    card.innerHTML = `
+        <div class="term-header">
+            <span class="category-badge" data-category="${term.category}">
+                ${getCategoryIcon(term.category)} ${term.category}
+            </span>
+            <div class="term-actions">
+                <button class="speak-btn" onclick="speakText('${term.arabic}', 'ar')" title="استمع للنطق العربي">🔊</button>
+                <button class="favorite-btn ${isFavorite ? 'active' : ''}" onclick="toggleFavorite(${termIndex})" title="إضافة للمفضلة">
+                    ${isFavorite ? '❤️' : '🤍'}
+                </button>
+            </div>
+        </div>
+        <div class="term-arabic" onclick="speakText('${term.arabic}', 'ar')">${highlightText(term.arabic, searchQuery)}</div>
+        <div class="term-english" onclick="speakText('${term.english}', 'en')">${highlightText(term.english, searchQuery)}</div>
+        ${synonymsDisplay}
+        <div class="term-example">${highlightText(term.example, searchQuery)}</div>
+        <button class="speak-btn-en" onclick="speakText('${term.english}', 'en')" title="Listen to English pronunciation">🔊 EN</button>
+    `;
+    
+    return card;
 }
 
 // Hide search results

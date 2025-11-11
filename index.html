@@ -18,7 +18,17 @@
 
         <div class="search-section">
             <input type="text" id="searchInput" placeholder="🔍 ابحث عن مصطلح بالعربية أو الإنجليزية...">
-            <button onclick="searchTerm()" class="interactive-hover">🚀 بحث</button>
+            <select id="categoryFilter" class="category-filter">
+                <option value="all">🌍 جميع الفئات - All Categories</option>
+                <option value="Business">💼 الأعمال - Business</option>
+                <option value="Technology">💻 التقنية - Technology</option>
+                <option value="Medical">🏥 طبية - Medical</option>
+                <option value="Travel">✈️ السفر - Travel</option>
+                <option value="Education">🎓 تعليمية - Education</option>
+                <option value="Finance">💰 مالية - Finance</option>
+                <option value="General">📝 عامة - General</option>
+            </select>
+            <button onclick="searchTerm()" class="interactive-hover">🚀 بحث ذكي</button>
             <button onclick="clearSearch()" class="interactive-hover" style="background: var(--gradient-primary);">✨ مسح</button>
         </div>
 
