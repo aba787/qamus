@@ -75,21 +75,32 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Add enter key functionality to search
+    // Search functionality - Enter key
     document.getElementById('searchInput').addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
+            e.preventDefault();
             searchTerm();
         }
     });
     
-    // Add real-time search as user types
+    // Real-time search as user types
     document.getElementById('searchInput').addEventListener('input', function() {
         const query = this.value.trim();
-        if (query.length >= 2) {
+        if (query.length >= 1) {
             searchTerm();
         } else if (query.length === 0) {
             hideSearchResults();
         }
     });
+    
+    // Search button click event
+    const searchButton = document.querySelector('button[onclick="searchTerm()"]');
+    if (searchButton) {
+        searchButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            searchTerm();
+        });
+    }
     
     // Add ripple effect to buttons
     addRippleEffect();
@@ -140,10 +151,17 @@ function createTermCard(term, index = null) {
     return card;
 }
 
-// Enhanced search functionality
+// Enhanced search functionality with visual feedback
 function searchTerm() {
     const searchInput = document.getElementById('searchInput');
     const query = searchInput.value.trim().toLowerCase();
+    
+    // Add searching animation
+    searchInput.style.background = 'linear-gradient(135deg, rgba(139, 21, 56, 0.1), rgba(114, 47, 55, 0.1))';
+    
+    setTimeout(() => {
+        searchInput.style.background = 'rgba(255, 255, 255, 0.9)';
+    }, 300);
     
     if (!query) {
         hideSearchResults();
@@ -161,7 +179,8 @@ function searchTerm() {
     displaySearchResults(results, query);
     
     // Log for debugging
-    console.log(`Searching for: "${query}", Found: ${results.length} results`);
+    console.log(`🔍 البحث عن: "${query}" - وُجد: ${results.length} نتائج`);
+    console.log('Results found:', results);
 }
 
 // Display search results with improved UI
@@ -599,30 +618,7 @@ function createParticle(container) {
     }, (Math.random() * 20 + 10) * 1000);
 }
 
-// Enhanced search with visual feedback
-function searchTerm() {
-    const searchInput = document.getElementById('searchInput');
-    const query = searchInput.value.trim().toLowerCase();
-    
-    // Add searching animation
-    searchInput.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1))';
-    
-    setTimeout(() => {
-        searchInput.style.background = 'rgba(255, 255, 255, 0.9)';
-    }, 300);
-    
-    if (!query) {
-        hideSearchResults();
-        return;
-    }
-    
-    const results = hrTerms.filter(term => 
-        term.arabic.toLowerCase().includes(query) ||
-        term.english.toLowerCase().includes(query)
-    );
-    
-    displaySearchResults(results, query);
-}
+// تم إزالة الدالة المكررة - الدالة الأساسية موجودة أعلاه
 
 // Create voice settings panel
 function createVoiceSettings() {
