@@ -81,6 +81,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Add real-time search as user types
+    document.getElementById('searchInput').addEventListener('input', function() {
+        const query = this.value.trim();
+        if (query.length >= 2) {
+            searchTerm();
+        } else if (query.length === 0) {
+            hideSearchResults();
+        }
+    });
+    
     // Add ripple effect to buttons
     addRippleEffect();
     
@@ -130,7 +140,7 @@ function createTermCard(term, index = null) {
     return card;
 }
 
-// Search functionality
+// Enhanced search functionality
 function searchTerm() {
     const searchInput = document.getElementById('searchInput');
     const query = searchInput.value.trim().toLowerCase();
@@ -140,15 +150,21 @@ function searchTerm() {
         return;
     }
     
+    // Enhanced search - includes category and example search
     const results = hrTerms.filter(term => 
         term.arabic.toLowerCase().includes(query) ||
-        term.english.toLowerCase().includes(query)
+        term.english.toLowerCase().includes(query) ||
+        term.category.toLowerCase().includes(query) ||
+        term.example.toLowerCase().includes(query)
     );
     
     displaySearchResults(results, query);
+    
+    // Log for debugging
+    console.log(`Searching for: "${query}", Found: ${results.length} results`);
 }
 
-// Display search results
+// Display search results with improved UI
 function displaySearchResults(results, query) {
     const searchResults = document.getElementById('searchResults');
     const resultsContainer = document.getElementById('resultsContainer');
@@ -159,20 +175,31 @@ function displaySearchResults(results, query) {
     if (results.length === 0) {
         resultsContainer.innerHTML = `
             <div class="no-results">
-                لم يتم العثور على نتائج لـ "${query}"<br>
-                No results found for "${query}"
+                😔 لم يتم العثور على نتائج لـ "<strong>${query}</strong>"<br>
+                😔 No results found for "<strong>${query}</strong>"<br>
+                <small>جرب كلمات مختلفة أو تحقق من الإملاء</small>
             </div>
         `;
         return;
     }
+    
+    // Add results count
+    resultsContainer.innerHTML = `
+        <div style="text-align: center; margin-bottom: 20px; padding: 10px; background: linear-gradient(135deg, rgba(139, 21, 56, 0.1), rgba(114, 47, 55, 0.1)); border-radius: 10px;">
+            <strong>🎯 تم العثور على ${results.length} نتيجة لـ "${query}"</strong><br>
+            <strong>🎯 Found ${results.length} result(s) for "${query}"</strong>
+        </div>
+    `;
     
     results.forEach(term => {
         const termCard = createTermCard(term);
         resultsContainer.appendChild(termCard);
     });
     
-    // Scroll to results
-    searchResults.scrollIntoView({ behavior: 'smooth' });
+    // Scroll to results smoothly
+    setTimeout(() => {
+        searchResults.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
 }
 
 // Hide search results
